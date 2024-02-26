@@ -1,0 +1,86 @@
+{
+  "manifestVersion": 1.0,
+  "id": "nu2910001-checklistperformance-hb-extension",
+  "version": "2.0.128",
+  "name": "Checklist Performance",
+  "description": "Extensión que permite evaluar la necesidad de pruebas de Performance",
+  "publisher": "nu2910001-checklistperformance-hb-extension",
+  "baseUri": "https://localhost:44300",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "demands": [],
+  "categories": [
+    "Azure Boards"
+  ],
+  "public": false,
+  "icons": {
+    "default": "images/extension-icon.png"
+  },
+  "tags": [
+    ""
+  ],
+  "scopes": [
+    "vso.release_manage",
+    "vso.extension.data",
+    "vso.notification_publish",        
+    "vso.work",
+    "vso.work_write",
+    "vso.variablegroups_read"
+  ],
+  "files": [
+    {
+      "path": "images",
+      "addressable": true
+    },
+    {
+      "path": "tasks/checklistPerformance/dist",
+      "addressable": true,
+      "packagePath": "tasks/checklistPerformance/dist"
+ 
+    },
+    {
+      "path": "tasks/checklistPerformance/src/helpers/main.css",
+      "addressable": true
+    },
+    {
+      "path": "tasks/checklistPerformance/node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "tasks/checklistPerformance/src/helpers/vista_tecnica/html/infoTecnica.html",
+      "addressable": true    
+    }
+  ],
+  "contributions": [
+    {
+      "id": "my-non-task-contribution",
+      "type": "ms.vss-web.hub",
+      "targets": [
+        "ms.vss-web.project-hub"
+      ],
+      "properties": {
+        "name": "My Non-Task Contribution",
+        "order": 50
+      }
+    },
+    {
+      "id": "settings-hub",
+      "type": "ms.vss-work-web.work-item-form-control",
+      "description": "Preguntas para identificar necesidad de pruebas de performance",
+      "targets": [
+          "ms.vss-work-web.work-item-form"
+      ],
+      "properties": {
+          "name": "Performance",
+          "order": 1,
+          "uri": "tasks/checklistPerformance/src/helpers/vista_tecnica/html/infoTecnica.html",
+          "height": 700
+      }
+  }
+  ]
+}
+ 

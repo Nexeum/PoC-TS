@@ -1,0 +1,24 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node scripts/install.js",
+    "build": "node scripts/build.js",
+    "package": "node scripts/package.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azde-scripts": "^2.0.2",
+    "azure-devops-extension-sdk": "^4.0.2",
+    "azure-pipelines-task-lib": "^4.9.1",
+    "redis": "^4.6.13",
+    "rimraf": "^5.0.5",
+    "tfx-cli": "^0.16.0",
+    "vss-web-extension-sdk": "^5.140.0"
+  }
+}
